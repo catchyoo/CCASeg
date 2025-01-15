@@ -14,18 +14,41 @@ This repository contains the official PyTorch implementation of training & evalu
 ---
 
 ## Installation
+For install and data preparation, please refer to the guidelines in [MMSegmentation v1.0.0](https://github.com/open-mmlab/mmsegmentation?tab=readme-ov-file)
+Other requirements: pip install timm==0.9.12
+An example (works for me): CUDA 11.8 and pytorch 2.0.1
+
+```bash
+pip install torchvision==0.16.0
+pip install timm==0.9.12
+pip install mmcv==2.1.0
+pip install opencv-python==4.8.1.78
+cd CCASeg && pip install -e . --user
+```
 
 ## Evaluation
+Download CCASeg weights into the ``/path/to/checkpoint_file``.
 
+``local_configs/`` contains config files. 
+
+Example : Evaluate ``CCASeg-B0`` on ``ADE20K``:
+
+```bash
+# Single-gpu testing
+CUDA_VISIBLE_DEVICES=0 python ./tools/test.py local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py /path/to/checkpoint_file
+
+# Multi-gpu testing
+CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_test.sh local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py /path/to/checkpoint_file <GPU_NUM>
+```
 ## Training
-Example : Train 'CCASeg-B0' on 'ADE20K'
+Example : Train ``CCASeg-B0`` on ``ADE20K``:
 
 ```bash
 # Single-gpu training
-CUDA_VISIBLE_DEVICES=0 python ./tools/train.py local_configs/ccaseg/B0/ccaseg.B0.512x512.ade
+CUDA_VISIBLE_DEVICES=0 python ./tools/train.py local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py 
 
 # Multi-gpu training
-CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_train.sh local_configs/ccaseg/B0/ccaseg.B0.512x512.ade
+CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_train.sh local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py <GPU_NUM>
 ```
 
 ## Citation
