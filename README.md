@@ -28,7 +28,7 @@ cd CCASeg && pip install -e . --user
 ```
 
 ## Evaluation
-Download CCASeg weights into the ``/path/to/checkpoint_file``.
+Download [CCASeg weights](https://drive.google.com/drive/folders/1hKgzJ0vhjhPcG5TRG0dkA5YpD8N8qyPp?hl=ko) into the ``/path/to/checkpoint_file``.
 
 ``local_configs/`` contains config files. 
 
