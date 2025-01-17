@@ -36,10 +36,10 @@ Example : Evaluate ``CCASeg-B0`` on ``ADE20K``:
 
 ```bash
 # Single-gpu testing
-CUDA_VISIBLE_DEVICES=0 python ./tools/test.py local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py /path/to/checkpoint_file
+CUDA_VISIBLE_DEVICES=0 python ./tools/test.py local_configs/ccaseg/B0/ccaseg.b0.512x512.ade.160k.py /path/to/checkpoint_file
 
 # Multi-gpu testing
-CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_test.sh local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py /path/to/checkpoint_file <GPU_NUM>
+CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_test.sh local_configs/ccaseg/B0/ccaseg.b0.512x512.ade.160k.py /path/to/checkpoint_file <GPU_NUM>
 ```
 ## Training
 Download backbone(MiT-B0 & MiT-B1 & MSCAN-T & MSCAN-B) pretrained weights in [here](https://drive.google.com/drive/folders/1Wr4qiaH54IywMEIJ39w-5X3-MKVOxYi1?hl=ko).
@@ -50,10 +50,10 @@ Example : Train ``CCASeg-B0`` on ``ADE20K``:
 
 ```bash
 # Single-gpu training
-CUDA_VISIBLE_DEVICES=0 python ./tools/train.py local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py 
+CUDA_VISIBLE_DEVICES=0 python ./tools/train.py local_configs/ccaseg/B0/ccaseg.b0.512x512.ade.160k.py 
 
 # Multi-gpu training
-CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_train.sh local_configs/ccaseg/B0/ccaseg.B0.512x512.ade.160k.py <GPU_NUM>
+CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_train.sh local_configs/ccaseg/B0/ccaseg.b0.512x512.ade.160k.py <GPU_NUM>
 ```
 
 ## Citation
