@@ -1,4 +1,5 @@
 # CCASeg : Decoding Multi-Scale Context with Convolutional Cross-Attention for Semantic Segmentation (WACV 2025)
+#### 📝[Paper](https://openaccess.thecvf.com/content/WACV2025/papers/Yoo_CCASeg_Decoding_Multi-Scale_Context_with_Convolutional_Cross-Attention_for_Semantic_Segmentation_WACV_2025_paper.pdf)
 
 > #### Jiwon Yoo<sup>1</sup>\*, Dami Ko<sup>1</sup>\*, Gyeonghwan Kim<sup>1&dagger;</sup>
 > \* Equal contribution, <sup>&dagger;</sup>Correspondence
